@@ -1,6 +1,6 @@
-# 🏦 Aplikasi Antrian Bank
+# 🏦 Aplikasi Antrian Pelayanan
 
-Sistem antrian berbasis web menggunakan **PHP**, **WebSocket (Ratchet)**, dan **QR Code**. Dibangun untuk lingkungan perbankan yang membutuhkan manajemen antrian teller secara real-time.
+Sistem antrian berbasis web menggunakan **PHP**, **WebSocket (Ratchet)**, dan **QR Code**. Dibangun untuk lingkungan perPelayananan yang membutuhkan manajemen antrian teller secara real-time.
 
 ---
 
