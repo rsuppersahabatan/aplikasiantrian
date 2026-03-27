@@ -1,0 +1,22 @@
+# ============================================================
+# Dockerfile.websocket – Ratchet WebSocket Server (port 8080)
+# ============================================================
+FROM php:7.4-cli
+
+# Install ekstensi yang dibutuhkan
+RUN apt-get update && apt-get install -y \
+        libzip-dev \
+        zip \
+        unzip \
+    && docker-php-ext-install zip \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Salin seluruh aplikasi (termasuk folder websockets/ dan data/)
+COPY . /app/
+
+WORKDIR /app/websockets/bin
+
+# Jalankan WebSocket server
+CMD ["php", "queue-server.php"]
+
+EXPOSE 8080

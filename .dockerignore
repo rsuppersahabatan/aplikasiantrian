@@ -1,0 +1,15 @@
+# Git
+.git
+.gitignore
+
+# Logs dan file debug
+debug.log
+*.log
+
+# File sementara
+*.tmp
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db

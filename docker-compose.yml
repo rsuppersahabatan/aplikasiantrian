@@ -1,0 +1,53 @@
+version: "3.9"
+
+services:
+  # ─────────────────────────────────────────────
+  # Web server (PHP + Apache) – port 80
+  # ─────────────────────────────────────────────
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: antrian_web
+    ports:
+      - "80:80"
+    volumes:
+      # Mount folder data agar sinkron dengan websocket container
+      - antrian_data:/var/www/html/data
+    restart: unless-stopped
+    depends_on:
+      - websocket
+    networks:
+      - antrian_net
+
+  # ─────────────────────────────────────────────
+  # WebSocket server (Ratchet PHP) – port 8080
+  # ─────────────────────────────────────────────
+  websocket:
+    build:
+      context: .
+      dockerfile: Dockerfile.websocket
+    container_name: antrian_ws
+    ports:
+      - "8080:8080"
+    volumes:
+      # Gunakan volume yang sama agar file data/ terbagi
+      - antrian_data:/app/data
+    restart: unless-stopped
+    networks:
+      - antrian_net
+
+# ─────────────────────────────────────────────
+# Volume bersama untuk folder data/
+# ─────────────────────────────────────────────
+volumes:
+  antrian_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./data
+
+networks:
+  antrian_net:
+    driver: bridge
