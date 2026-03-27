@@ -319,9 +319,10 @@ elseif($teller == 3)
 <script type="text/javascript" src="../assets/js/webqr/llqrcode.js"></script>
 <script type="text/javascript" src="../assets/js/webqr/webqr.js"></script>
 
+<script src="../config.php"></script>
 <script>
 var teller = "<?=$teller;?>"
-  var conn = new WebSocket('ws://'+ window.location.hostname+':8080');
+  var conn = new WebSocket(APP_CONFIG.wsFullUrl());
     conn.onopen = function(e) {
         console.log("Connection established!");
         init();

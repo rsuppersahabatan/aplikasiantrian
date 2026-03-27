@@ -113,11 +113,11 @@
 <script type="text/javascript" src="../assets/js/splash/modernizr.min.js"></script>
 <script type="text/javascript" src="../assets/js/splash/glfx.min.js"></script>
 
+<script src="../config.php"></script>
 <script>
   var base_url = window.location.protocol + "//" + window.location.host + "/";
- // alert(window.location.host);
 
-  var conn = new WebSocket('ws://'+window.location.host);
+  var conn = new WebSocket(APP_CONFIG.wsFullUrl());
   var soundcontainer = document.getElementById('soundcontainer');
   index = 0;
   function playSound(files){
