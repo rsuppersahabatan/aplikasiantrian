@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Panggilan Nomor Antrian</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/splash/jquery-ui-1.10.3.custom.css" />
+
+  <link rel="stylesheet" type="text/css" href="../assets/css/splash/bootstrap.3.min.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/splash/select2.min.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/splash/bootstrap-responsive.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="../assets/css/splash/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/splash/style.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/splash/animations.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/splash/superslides.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/splash/flexslider.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/splash/masonry.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/splash/fancybox.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/splash/color/multicolor.css" id="swap-color" />
+
+</head>
+<body>
+    <audio id="suarabel" src="../Airport_Bell.mp3"></audio>
+    <audio id="soundcontainer" src=""  ></audio> 
+
+<!-- Logo -->
+<div class="logo"><img src="../images/bank_abc.png" alt="Logo" width="150" />
+  <div id="map-canvas-home"></div>
+</div>
+
+<!-- Slider -->
+<div id="slides">
+  <ul class="slides-container">
+    <!-- Slider Single Item -->
+    <li><a href="#"><img src="../images/Teller-Line.jpg" alt="Backgriound 1" /></a>
+        <div class="slides-detail">
+            <h1>Aplikasi <span>Pelayanan</span> Antrian</h1>
+            <span class="lead">Bank <strong>ABC</strong></span>
+        </div>
+    </li>
+    <li><a href="#"><img src="../images/Waiting-Area.jpg" alt="Backgriound 2" /></a>
+      <div class="slides-detail">
+        <h1>Terima <span>Kasih</span></h1>
+        <span class="lead">Telah <strong>Mengantri</strong> dengan <strong>Sabar</strong></span>
+      </div>
+    </li>
+  </ul>
+
+  <!-- <div class="slides-navigation">
+      <a href="#" class="prev"><i class="icon-angle-left"></i></a>
+      <a href="#" class="next"><i class="icon-angle-right"></i></a>
+  </div> -->
+
+  
+</div>
+
+<!-- About Section -->
+<div id="services" class="section section-expand"  style="background-color: #2ecc71;">
+  <div class="section-title" style="margin-top:80px; margin-bottom: 50px;">
+    <p style="font-size: 50px;">Nomor <span>Antrian</span></p>
+    <br/>
+    <h1 class="main-title" style="font-size: 100px; margin-top: 35px; background-color: #F33;"><span id="calling">0</span></h1>
+
+
+  </div>
+
+  <!-- About Content -->
+  <div class="container">
+    <hr />
+    <div class="row">
+      <div class="col-xs-4">
+        <h1 class="main-title callstatusteller" id="callstatus_teller1"><span id="call_teller1">0</span></h1>
+        <h1 class="main-title" style="background-color: #2A69B0;" id="status_teller1">Loket <span>1</span></h1>
+      </div>
+      <div class="col-xs-4">
+        <h1 class="main-title callstatusteller" id="callstatus_teller2"><span id="call_teller2">0</span></h1>
+        <h1 class="main-title" style="background-color: #669;" id="status_teller2">Loket <span>2</span></h1>
+      </div>
+       <div class="col-xs-4">
+        <h1 class="main-title callstatusteller" id="callstatus_teller3"><span id="call_teller3">0</span></h1>
+        <h1 class="main-title" style="background-color: #FC0;" id="status_teller3">Loket <span>3</span></h1>
+      </div>
+    </div>  
+    <hr style="padding-bottom: 20px;" />
+    <h4 class="pull-left" style=" padding-top:5px;">Kurs <span>Valuta Asing</span> </h4>
+    <div class="pull-right" style="width: 75%; padding-top:5px;  background-color: #27ae60;">
+    <marquee style="color: #FFF;">
+    USD <strong>Jual - Beli</strong> : <strong>13.625 - 13.075</strong> | EUR <strong>Jual - Beli</strong> : <strong>14.804,4 - 14.044,9</strong>
+     | SGD <strong>Jual - Beli</strong> : <strong>9.687,05 - 9.154,25</strong> | AUD <strong>Jual - Beli</strong> : <strong>10.335,5 - 9.776,9</strong> | JPY <strong>Jual - Beli</strong> : <strong>133,65 - 115,0</strong>
+    </marquee>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+<!--</div>-->
+<a href="#" class="section-close">&times;</a>
+
+<!-- Scripts -->
+<script type="text/javascript" src="../assets/js/splash/jquery-1.10.0.min.js"></script>
+<script type="text/javascript" src="../assets/js/splash/jquery-ui.js"></script>
+
+<script type="text/javascript" src="../assets/js/splash/select2.full.js"></script>
+<script type="text/javascript" src="../assets/js/splash/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="../assets/js/splash/jquery.animate-enhanced.min.js"></script>
+<script type="text/javascript" src="../assets/js/splash/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../assets/js/splash/jquery.superslides.min.js"></script>
+<script type="text/javascript" src="../assets/js/splash/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="../assets/js/splash/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="../assets/js/splash/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="../assets/js/splash/jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="../assets/js/splash/bootstrap3-typeahead.js"></script>
+<script type="text/javascript" src="../assets/js/splash/modernizr.min.js"></script>
+<script type="text/javascript" src="../assets/js/splash/glfx.min.js"></script>
+
+<script>
+  var base_url = window.location.protocol + "//" + window.location.host + "/";
+ // alert(window.location.host);
+
+  var conn = new WebSocket('ws://'+window.location.host+':8080');
+  var soundcontainer = document.getElementById('soundcontainer');
+  index = 0;
+  function playSound(files){
+    //soundcontainer.pause();
+    if (index < files.length) {
+      soundcontainer.src = files[index];
+      soundcontainer.currentTime = 0;
+      index++;
+
+      //soundcontainer.load();
+      var audio = new Audio(soundcontainer.src);
+      audio.play();
+      audio.addEventListener('ended', function(){
+        setInterval(playSound(files), 1000);
+        //
+      });
+
+    }else{
+      //soundcontainer.pause();
+      console.log('sound stoped');
+      nextqueue();
+    }
+    //index = 0;
+  }
+  var nomor = []; 
+  function panggil(antrian){
+    
+    if(antrian < 10){
+      //nomor.push(base_url + 'appantrian/rekaman/'+antrian+'.wav');
+      nomor.push(base_url + 'appantrian/rekaman/ori/'+antrian+'.mp3');
+    }else if(antrian == 10){
+      //nomor.push(base_url + 'appantrian/rekaman/sepuluh.wav');
+      nomor.push(base_url + 'appantrian/rekaman/ori/sepuluh.mp3');
+    
+    }else if(antrian == 11){
+      //nomor.push(base_url + 'appantrian/rekaman/sebelas.wav');
+      nomor.push(base_url + 'appantrian/rekaman/ori/sebelas.mp3');
+    }else if(antrian < 20){
+      var pecah = antrian - 10;
+      //nomor.push(base_url + 'appantrian/rekaman/'+pecah+'.wav');
+      //nomor.push(base_url + 'appantrian/rekaman/belas.wav');
+      nomor.push(base_url + 'appantrian/rekaman/ori/'+pecah+'.mp3');
+      nomor.push(base_url + 'appantrian/rekaman/ori/belas.mp3');
+    }else if(antrian < 100){
+      var pecah = Math.floor(antrian / 10);
+      var puluh = antrian - (pecah * 10);
+      //nomor.push(base_url + 'appantrian/rekaman/'+pecah+'.wav');
+      //nomor.push(base_url + 'appantrian/rekaman/puluh.wav');
+      nomor.push(base_url + 'appantrian/rekaman/ori/'+pecah+'.mp3');
+      nomor.push(base_url + 'appantrian/rekaman/ori/puluh.mp3');
+      if(puluh > 0){
+        //nomor.push(base_url + 'appantrian/rekaman/'+puluh+'.wav');
+        nomor.push(base_url + 'appantrian/rekaman/ori/'+puluh+'.mp3');
+      }
+    }else if(antrian == 100){
+      //nomor.push(base_url + 'appantrian/rekaman/seratus.wav');
+      nomor.push(base_url + 'appantrian/rekaman/ori/seratus.mp3');
+    }else if(antrian < 200){
+      //nomor.push(base_url + 'appantrian/rekaman/seratus.wav');
+      nomor.push(base_url + 'appantrian/rekaman/ori/seratus.mp3');
+      var pecah = Math.floor(antrian / 100);
+      var puluh = antrian - (pecah * 100);
+      panggil(puluh);
+    }else if(antrian < 1000){
+      var pecah = Math.floor(antrian / 100);
+      var puluh = antrian - (pecah * 100);
+      nomor.push(base_url + 'appantrian/rekaman/ori/'+pecah+'.mp3');
+      nomor.push(base_url + 'appantrian/rekaman/ori/ratus.mp3');
+      
+
+
+    }else{
+      var panjang = antrian.length;
+      for(var i = 0; i< panjang; i++){
+        //nomor.push(base_url + 'appantrian/rekaman/'+antrian.charAt(i)+'.wav');
+        nomor.push(base_url + 'appantrian/rekaman/ori/'+antrian.charAt(i)+'.mp3');
+      }
+    }
+    //return nomor;
+  }
+  
+    conn.onopen = function(e) {
+        console.log("Connection established!");
+        //init();
+    };
+
+    conn.onmessage = function(e) {
+        var color = "#F33";
+        var dcolor =""
+        var msg = e.data.split(":");
+
+        if(msg[0] != 'datanasabah'){
+          
+
+          
+          //$('#suarabel').play();
+          var playlist = [];
+          if(msg[2] == 'call'){
+            //playlist = [base_url + 'appantrian/rekaman/Airport_Bell.mp3', base_url + 'appantrian/rekaman/nomor-urut.wav'];
+            playlist = [base_url + 'appantrian/rekaman/Airport_Bell.mp3', base_url + 'appantrian/rekaman/ori/noantrian.mp3'];
+          }else if(msg[2] == 'recall'){
+            //playlist = [base_url + 'appantrian/rekaman/nomor-urut.wav'];
+            playlist = [base_url + 'appantrian/rekaman/ori/noantrian.mp3'];
+          }
+          
+          if(msg[2] == 'call' || msg[2] == 'recall'){
+            $("#calling").html(msg[1]);
+            $("#call_"+msg[0]).html(msg[1]);
+            
+            $(".callstatusteller").css('background-color', 'transparent');
+            $("#callstatus_"+msg[0]).css('background-color', color);
+
+            index = 0;
+            //var playlist =  [];
+            nomor = [];
+            panggil(msg[1])
+            playlist = playlist.concat(nomor);
+            //playlist.push(base_url + 'appantrian/rekaman/loket.wav');
+            //playlist.push(base_url + 'appantrian/rekaman/'+msg[3]+'.wav');
+            playlist.push(base_url + 'appantrian/rekaman/ori/loket.mp3');
+            playlist.push(base_url + 'appantrian/rekaman/ori/'+msg[3]+'.mp3');
+            playSound(playlist);
+          }
+          
+          
+          if(msg[2] == 'call'){
+            var writeback = msg[1];
+            conn.send('write:'+writeback);
+          }
+        }
+       
+
+        
+        
+    };
+
+    conn.onclose = function() {
+        //$("#calling").html("Teller <?=$teller;?> Off");
+        
+    };
+
+
+    function nextqueue(){
+      conn.send('next');
+    }
+</script>
+
+<script type="text/javascript">
+
+$(document).ready(function () {
+    $(".section-about i").toggleClass("active");
+    
+    /* --- Open Section --- */
+    $(".section").click(function () {
+    $(".section-close").show(250);
+        $(this).addClass("section-expand");
+        //$(".switch-section").show(250);        
+        //$(".switch-section").addClass("switch-section-open");
+    });
+  
+    /* --- Close Section --- */
+    $(".section-close").click(function () { 
+        $(".section").removeClass("section-expand");
+        //$(".switch-section").hide(250);
+        $(".section-close").hide(250);
+        //$(".section-about i, .section-services i, .section-folio i, .section-blog i, .section-contact i").removeClass("active");
+    
+    $("#panelpmb").hide();
+    $("#panelpilih").show();
+
+        $("#panelnodaftar").show(25);
+        $("#panelreg").hide(25);
+
+    });
+  
+    /* --- Side Menu --- */
+    $(".switch-section").click(function () {
+        $(this).toggleClass("switch-section-open");
+    });
+
+    /* --- Switch Section --- */
+    $(".section-about").click(function () {
+        $(".section").removeClass("section-expand");
+        $("#about").addClass("section-expand");
+    });
+    
+    $("#about").click(function () {
+        $(".section-about i").toggleClass("active");
+    });
+
+    $(".section-services").click(function () {
+        $(".section").removeClass("section-expand");
+        $("#services").addClass("section-expand");
+    });
+    
+    $("#services").click(function () {
+        $(".section-services i").toggleClass("active");
+    });
+
+    $(".section-folio").click(function () {
+        $(".section").removeClass("section-expand");
+        $("#folio").addClass("section-expand");
+    $("#btnstmik").trigger("focus");
+    });
+    
+    $("#folio").click(function () {
+        //$(".section-folio i").toggleClass("active");
+      $(".section").removeClass("section-expand");
+        $("#folio").addClass("section-expand");
+      $("#btnstmik").trigger("focus");
+    });
+
+    $(".section-blog").click(function () {
+        $(".section").removeClass("section-expand");
+        $("#blog").addClass("section-expand");
+        $("#alt-ambildata").alert('close');
+    });
+
+    $("#blog").click(function () {
+        //$(".section-blog i").toggleClass("active");
+        $(".section").removeClass("section-expand");
+        $("#blog").addClass("section-expand");
+        $("#alt-ambildata").alert('close');
+    });
+
+    $(".section-contact").click(function () {
+        $(".section").removeClass("section-expand");
+        $("#contact").addClass("section-expand");
+
+    });
+    
+    
+    $("#contact").click(function () {
+        $(".section-contact i").toggleClass("active");
+    });
+
+    /* --- Active Filter Menu --- */
+    $(".switch-section a i, .filter a").click(function (e) {
+        $(".switch-section a i, .filter a").removeClass("active");
+        $(this).addClass("active");
+        e.preventDefault();
+    });
+
+    /* --- Masonry --- */
+
+
+    /* --- Item Description --- */
+    $(".item").click(function () {
+        $(this).toggleClass("open");
+    });
+
+    /* --- Fancybox --- */
+    $(".view-fancybox").fancybox({
+        openEffect: 'elastic',
+        closeEffect: 'elastic',
+        next: '<i class="icon-smile"></i>',
+        prev: '<a title="Previous" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>'
+    });
+
+    /* --- NiceScroll --- */
+    $(".section").niceScroll();
+
+    /* --- Slider --- */
+    $('#slides').superslides({
+        slide_easing: 'easeInOutCubic',
+        slide_speed: 800,
+        play: 4000,
+        pagination: true,
+        hashchange: true,
+        scrollable: true
+    });
+
+    $("#contact, .section-contact").on("click", function () {
+
+        step1();
+        $(video).removeClass("hidden");
+        video.play();
+        $(img).attr('src', '');
+        $(img).addClass('hidden');
+        $(cetakan).html('');
+
+    });
+
+    /* --- Swap color --- */
+    $('.change-white, .change-black, .change-multicolor').click(function () {
+        $('#swap-color').attr('href', 'css/color/' + $(this).data('color') + '.css');
+        return false;
+    });
+
+    /*=============================================================================================-==*/
+    $("#form_antrian").submit(function (event) {
+        // Stop form from submitting normally
+        event.preventDefault();
+
+        step2();
+        changeStep(2);
+        var vimg =  $(img).attr("src");
+        $("#pics").val(vimg);
+
+        // Get some values from elements on the page:
+        var $form = $(this), url = $form.attr("action");
+
+        // Send the data using post
+        $.post(url, $(this).serialize(), function (data) {
+            $("#cetakan").html(data);
+
+            $("#inputNik").val("");
+            $("#inputNama").val("");
+
+        }, "html");
+        
+    });
+
+    /*===============================================================================================*/
+
+    
+
+});
+
+/* --- Flex Slider --- */
+$(window).load(function () {
+  $(".section-about i").toggleClass("active");
+    $(".flexslider").flexslider({
+        animation: "slide",
+        animationLoop: true,
+        itemWidth: 300,
+        itemMargin: 0,
+        prevText: "<i class='icon-angle-left'></i>",
+        nextText: "<i class='icon-angle-right'></i>"
+    });
+});
+
+
+</script>
+
+</body>
+</html>
