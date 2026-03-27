@@ -2,15 +2,15 @@ version: "3.9"
 
 services:
   # ─────────────────────────────────────────────
-  # Web server (PHP + Apache) – port 80
+  # Web server (PHP + Apache)
   # ─────────────────────────────────────────────
   web:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: antrian_web
+    container_name: ${WEB_CONTAINER_NAME:-antrian_web}
     ports:
-      - "80:80"
+      - "${APP_PORT:-80}:80"
     volumes:
       # Mount folder data agar sinkron dengan websocket container
       - antrian_data:/var/www/html/data
@@ -21,15 +21,15 @@ services:
       - antrian_net
 
   # ─────────────────────────────────────────────
-  # WebSocket server (Ratchet PHP) – port 8080
+  # WebSocket server (Ratchet PHP)
   # ─────────────────────────────────────────────
   websocket:
     build:
       context: .
       dockerfile: Dockerfile.websocket
-    container_name: antrian_ws
+    container_name: ${WS_CONTAINER_NAME:-antrian_ws}
     ports:
-      - "8080:8080"
+      - "${WS_PORT:-8080}:8080"
     volumes:
       # Gunakan volume yang sama agar file data/ terbagi
       - antrian_data:/app/data
