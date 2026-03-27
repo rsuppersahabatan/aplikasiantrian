@@ -321,7 +321,7 @@ elseif($teller == 3)
 
 <script>
 var teller = "<?=$teller;?>"
-  var conn = new WebSocket('ws://'+ window.location.host+':8080');
+  var conn = new WebSocket('ws://'+ window.location.hostname+':8080');
     conn.onopen = function(e) {
         console.log("Connection established!");
         init();
